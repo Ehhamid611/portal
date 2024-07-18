@@ -110,6 +110,7 @@ const sidebars = {
               type: "doc",
               id: "developer-docs/smart-contracts/write/overview",
             },
+            "developer-docs/smart-contracts/write/auto-scaling-architecture",
             "developer-docs/smart-contracts/write/resources",
           ],
         },
@@ -295,10 +296,18 @@ const sidebars = {
             },
             {
               type: "category",
-              label: "On-chain signatures: Threshold ECDSA",
+              label: "On-chain signatures",
               items: [
-                "developer-docs/smart-contracts/encryption/t-ecdsa",
-                "developer-docs/smart-contracts/encryption/signing-messages",
+                "developer-docs/smart-contracts/signatures/t-ecdsa",
+                "developer-docs/smart-contracts/signatures/t-schnorr",
+                {
+                  type: "category",
+                  label: "Signing messages",
+                  items: [
+                          "developer-docs/smart-contracts/signatures/signing-messages-t-ecdsa",
+                          "developer-docs/smart-contracts/signatures/signing-messages-t-schnorr",
+                  ],
+                },
               ],
             },
             "developer-docs/smart-contracts/advanced-features/periodic-tasks",
@@ -1351,7 +1360,11 @@ const sidebars = {
           type: "category",
           label: "Node providers",
           items: [
-            "references/node-providers/overview",
+            {
+              type: "doc",
+              label: "Overview",
+              id: "references/node-providers/overview",
+            },
             "references/node-providers/node-metrics",
           ],
         },
